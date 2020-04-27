@@ -8,7 +8,7 @@
   </button>
 
   <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="/page1">Page 1</a>
@@ -17,13 +17,13 @@
         <a class="nav-link" href="/page2">Page 2</a>
       </li>
     </ul>
-    <span class="navbar-text">
+    <ul>
     	{% if logged_in %}
-        	Github userid: {{ session['user_data']['login']}}
-	  	<a href="/logout">Logout</a>
+	    <li>Github userid: {{ session['user_data']['login']}}</li>
+	    <li><a href="/logout">Logout</a></li>
 	{% else %}
-		<a href="/login">Login</a>
+	    <li><a href="/login">Login</a></li>
 	{% endif %}
-     </span>
+     </ul>
   </div>
 </nav>
