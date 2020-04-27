@@ -20,9 +20,9 @@
     <ul class="navbar-nav">
     	{% if logged_in %}
 	    <li><span class="navbar-text">Github userid: {{ session['user_data']['login']}}</span></li>
-	    <li><a href="/logout">Logout</a></li>
+	    <li class="nav-item"><a href="/logout">Logout</a></li>
 	{% else %}
-	    <li><a href="/login">Login</a></li>
+	    <li class="nav-item"><a href="/login">Login</a></li>
 	{% endif %}
      </ul>
   </div>
