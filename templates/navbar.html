@@ -17,7 +17,7 @@
         <a class="nav-link" href="/page2">Page 2</a>
       </li>
     </ul>
-    <ul>
+    <ul class="navbar-nav">
     	{% if logged_in %}
 	    <li>Github userid: {{ session['user_data']['login']}}</li>
 	    <li><a href="/logout">Logout</a></li>
